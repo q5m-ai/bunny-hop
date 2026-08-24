@@ -13,9 +13,10 @@
   <meta property="og:image:alt" content="A rabbit hopping toward fresh romaine in a market crate">
   <title>Pop-Up Hop-Up Bunny Training | Hop for the Prize!</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
   <script src="event-config.js?v=5" defer></script>
   <script src="script.js?v=5" defer></script>
+  <script src="game.js?v=1" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -100,6 +101,17 @@
     </section>
 
     <section class="section" id="prize"><div class="shell split reverse"><div class="prize-art" aria-hidden="true"><span class="leaf l1">🥬</span><span class="leaf l2">🌿</span><div class="crate-mini">FRESH<br><strong>ROMAINE</strong></div></div><div><p class="eyebrow">A nibble at the finish</p><h2>A Little Romaine, If Their Person Approves</h2><p class="section-intro">Fresh romaine can be used as a small reward, but only with the owner’s permission. Owners know their rabbits’ diets and health needs best.</p><ul class="check-list"><li>Use washed, fresh romaine</li><li>Offer only a small amount</li><li>Do not use iceberg lettuce</li><li>Provide no treats without the owner’s approval</li><li>Make clean drinking water available</li><li>Allow owners to supply their rabbit’s preferred treat instead</li></ul><p class="fine-note">When in doubt about food or physical activity, owners should consult their rabbit’s veterinarian.</p></div></div></section>
+
+    <section class="section game-section" id="game"><div class="shell"><div class="section-heading"><p class="eyebrow">Hop, crunch, repeat</p><h2>Bunny Hop-Up!</h2><p>Play the little side-scroller: hop over the hurdles and gobble fresh romaine. Whatever you do, avoid the iceberg.</p></div>
+      <div class="game-shell">
+        <div class="game-hud"><p>Romaine gobbled: <strong id="game-score">0</strong></p><p id="game-status" role="status" aria-live="polite">Press Start hopping, then use Space, Arrow Up, the canvas, or the Hop button.</p></div>
+        <div class="game-stage"><canvas id="bunny-game-canvas" width="900" height="400" tabindex="0" aria-label="Bunny side-scroller game. Jump over hurdles, collect romaine, and avoid iceberg lettuce.">Your browser does not support the bunny game canvas.</canvas>
+          <div class="game-gatekeeper" id="game-gatekeeper" hidden><img id="game-gatekeeper-photo" data-src="gatekeeper-banished.jpg?v=1" alt="The real Gatekeeper appearing after the iceberg mistake"><p id="game-verdict">You are banished!</p><button id="game-retry" type="button">Face the course again</button></div>
+        </div>
+        <div class="game-controls"><button class="button secondary" id="game-start" type="button">Start hopping</button><button class="button primary game-jump" id="game-jump" type="button">Hop! <span aria-hidden="true">↑</span></button></div>
+        <p class="game-note">A playful screen game only. Real rabbits should never be startled, rushed, or given iceberg lettuce.</p>
+      </div>
+    </div></section>
 
     <section class="section sky" id="participate"><div class="shell"><div class="section-heading"><p class="eyebrow">Ready, steady, comfortable</p><h2>Who Can Participate?</h2><p>The activity is intended for healthy, socialized pet rabbits whose owners believe they will be comfortable in the environment.</p></div><div class="participate-grid"><ul class="check-list card-list"><li>Rabbit arrives in a secure carrier</li><li>The Gatekeeper supervises while the owner stays with their rabbit</li><li>Rabbit appears calm and comfortable</li><li>Owner approves all food rewards</li><li>Rabbit can leave immediately if they show stress</li><li>No participation by sick, injured, very young, elderly, pregnant, or visibly distressed rabbits</li></ul><aside class="stress-card"><div class="stress-icon" aria-hidden="true">!</div><h3>Know the stress signs</h3><p>Freezing, repeated escape attempts, flattened posture, rapid breathing, aggression, or refusing food.</p><p><strong>Participation should stop immediately if stress is observed.</strong></p></aside></div></div></section>
 
