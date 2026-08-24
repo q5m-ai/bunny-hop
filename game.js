@@ -82,19 +82,13 @@
   const finish = (iceberg = false) => {
     playing = false;
     cancelAnimationFrame(animation);
-    if (iceberg) {
-      const messages = ["You maggots!", "You are banished!"];
-      verdict.textContent = messages[Math.floor(Math.random() * messages.length)];
-      if (!gatekeeperPhoto.src) gatekeeperPhoto.src = gatekeeperPhoto.dataset.src;
-      overlay.classList.remove("is-resting");
-      overlay.classList.add("is-crashing");
-      announce(`${verdict.textContent} You accidentally ate iceberg lettuce. Score: ${score}.`);
-    } else {
-      verdict.textContent = "A gentle breather!";
-      overlay.classList.remove("is-crashing");
-      overlay.classList.add("is-resting");
-      announce(`Your bunny bumped an obstacle and is taking a gentle breather. Score: ${score}.`);
-    }
+    const messages = ["You maggot!", "You are banished!"];
+    verdict.textContent = messages[Math.floor(Math.random() * messages.length)];
+    if (!gatekeeperPhoto.src) gatekeeperPhoto.src = gatekeeperPhoto.dataset.src;
+    overlay.classList.remove("is-resting");
+    overlay.classList.add("is-crashing");
+    const reason = iceberg ? "You accidentally ate iceberg lettuce." : "Your bunny bumped an obstacle.";
+    announce(`${verdict.textContent} ${reason} Score: ${score}.`);
     overlay.hidden = false;
   };
 
